@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
 import path from "path";
 import fs from "fs/promises";
 
@@ -9,8 +8,6 @@ import compressionRoutes from "./routes/compressionRoutes.js";
 import { ensureDirectories, getSafeCompressedPath } from "./utils/fileUtils.js";
 
 import { startCleanupJob } from "./services/cleanupService.js";
-
-dotenv.config();
 
 const app = express();
 
